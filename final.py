@@ -7,7 +7,7 @@ import getpass
 # Defining the chatbot
 cbot = ChatBot('Baymax')
 
-# Training the chat bot using CorpusTrainer modules
+# Training the chat bot using yml files
 trainer = ChatterBotCorpusTrainer(cbot)
 trainer.train(r'C:\Users\Adil\Desktop\IS\training\conversations.yml',
               r'C:\Users\Adil\Desktop\IS\training\greetings.yml',
