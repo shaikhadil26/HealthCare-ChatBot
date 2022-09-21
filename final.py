@@ -45,7 +45,7 @@ disease_list = [['Covid-19', 'dizziness', 'breathlessness', 'dry cough', 'loss i
 def check_list(symptom, diseases_list):
     for i in range(len(diseases_list)):
         for j in range(1,5):
-            if symptom == diseases_list[i][j]:
+            if symptom.lower() == diseases_list[i][j].lower():
                 diseases_list[i][5] += 1
     return diseases_list
 
