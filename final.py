@@ -217,7 +217,7 @@ while True:
 
             case '5':
                 sline()
-                bot_input = cbot.get_response('hey')
+                bot_input = cbot.get_response('hi')
                 print('Baymax-',bot_input)
                 while 1:
                     a = (input(''))
