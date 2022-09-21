@@ -9,12 +9,10 @@ cbot = ChatBot('Baymax')
 
 # Training the chat bot using CorpusTrainer modules
 trainer = ChatterBotCorpusTrainer(cbot)
-trainer.train("chatterbot.corpus.english.greetings",
-              "chatterbot.corpus.english.conversations",
-              "chatterbot.corpus.english.health",
-              "chatterbot.corpus.english.trivia",
-              "chatterbot.corpus.english.sports",
-              "chatterbot.corpus.english.psychology",
+trainer.train(r'C:\Users\Adil\Desktop\IS\training\conversations.yml',
+              r'C:\Users\Adil\Desktop\IS\training\greetings.yml',
+              r'C:\Users\Adil\Desktop\IS\training\medical.yml',              
+              r'C:\Users\Adil\Desktop\IS\training\trivia.yml'
               )
 
 # Local database of diseases with their symptoms

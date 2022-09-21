@@ -6,13 +6,8 @@ import getpass
 cbot = ChatBot('Baymax')
 
 trainer = ChatterBotCorpusTrainer(cbot)
-trainer.train("chatterbot.corpus.english.greetings",
-              "chatterbot.corpus.english.conversations",
-              "chatterbot.corpus.english.health",
-              "chatterbot.corpus.english.trivia",
-              "chatterbot.corpus.english.sports",
-              "chatterbot.corpus.english.psychology",
-              )
+trainer.train(r'C:\Users\Adil\Desktop\IS\training\x.yml',
+              r'C:\Users\Adil\Desktop\IS\training\medical.yml')
 
 disease_list = [['Covid-19', 'dizziness', 'breathlessness', 'dry cough', 'loss in smell', 0],
                 ['Allergic reaction', 'sneezing', 'blocked nose', 'wheezing','itchy rash',0],
