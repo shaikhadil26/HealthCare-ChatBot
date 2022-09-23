@@ -151,7 +151,6 @@ while True:
             case '1':
                 # print('success')
                 list1=[] 
-                
                 line()
                 sym1=input('Baymax- what symptom do u have?\n')
                 disease_list = check_list(sym1, disease_list)
@@ -178,6 +177,8 @@ while True:
                     if ch3 == 'yes':
                         b = disease_list[index1][0]
                         kt.search(b)
+                for i in range(len(disease_list)):
+                    disease_list[i][5] = 0        
                 line()
 
             case '2':

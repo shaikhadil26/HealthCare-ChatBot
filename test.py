@@ -131,21 +131,24 @@ while True:
             case '1':
                 # print('success')
                 list1=[] 
+                temp_list = disease_list
+
+                print(temp_list)
                 line()
                 sym1=input('Baymax- what symptom do u have?\n')
-                disease_list = check_list(sym1, disease_list)
+                temp_list = check_list(sym1, temp_list)
                 list1.append(sym1)
                 while True:
                     choice=input('Baymax- Do have any other symptoms?\n')
                     if choice=='yes':
                         sym=input("Baymax- please enter other symptoms\n")
-                        disease_list = check_list(sym, disease_list)
+                        temp_list = check_list(sym, temp_list)
                         list1.append(sym)
                     elif choice=='no':
                         break
                     else:
                         print('Baymax- Please enter a valid input')
-                index1 = disease_index(disease_list)
+                index1 = disease_index(temp_list)
                 if index1 == -1:
                     print('Baymax- Disease not available in database checking for symptoms online :(')
                     symps='+'.join(list1)
@@ -157,6 +160,8 @@ while True:
                     if ch3 == 'yes':
                         b = disease_list[index1][0]
                         kt.search(b)
+                for i in range(len(temp_list)):
+                    temp_list[i][5] = 0
                 line()
 
             case '2':
