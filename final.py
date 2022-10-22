@@ -114,10 +114,10 @@ if ch1 == 'y':
     print('\n\n\tAccount created\n\tPlease login again\n')
 
 line()
-count = 3
+count = 4
 name = ''
 # User login 
-while count >= 0:
+while count > 0:
     user = input("enter username: ")
     pass1 = getpass.getpass("enter password: ")
     if user in users_pass and users_pass[user] == pass1:
@@ -125,9 +125,11 @@ while count >= 0:
         break
     else:
         line()
+        count -= 1
         print(f'Incorrect id/pass\nYou have {count} valid retries left')
         line()
-        count -= 1
+        if count == 0:
+            exit()
 
 sline()     
 print(f"Baymax- Hello there i'm Baymax\nWelcome {name}")
